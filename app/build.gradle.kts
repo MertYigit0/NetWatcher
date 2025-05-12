@@ -63,15 +63,13 @@ dependencies {
     implementation(libs.androidx.lifecycle.viewmodel.compose)
 
 
-    implementation(libs.hilt.android)
-    ksp(libs.hilt.android.compiler)
-    implementation(libs.androidx.hilt.navigation.fragment)
-    implementation(libs.androidx.hilt.work)
-    implementation(libs.kotlinx.coroutines.android)
-    implementation (libs.hilt.android.v2432)
-    ksp (libs.hilt.compiler)
-    implementation (libs.androidx.hilt.navigation.compose)
-    implementation (libs.lifecycle.viewmodel.compose)
+    implementation(libs.hilt.android)                   // ✅ GEREKLİ — Hilt core kütüphanesi
+    ksp(libs.hilt.android.compiler)                     // ✅ GEREKLİ — Hilt annotation işlemleri için
+    implementation(libs.androidx.hilt.work)             // 🔄 LAZIMSA — Eğer WorkManager içinde Hilt injection yapıyorsan
+    implementation(libs.kotlinx.coroutines.android)     // ✅ GEREKLİ — Coroutines kullanıyorsan (ki kullanıyorsundur)
+    implementation(libs.androidx.hilt.navigation.compose) // 🔄 LAZIMSA — Jetpack Compose + Navigation + Hilt kullanıyorsan
+    implementation(libs.lifecycle.viewmodel.compose)    // 🔄 LAZIMSA — Compose'da ViewModel kullanıyorsan
+
 
 
 

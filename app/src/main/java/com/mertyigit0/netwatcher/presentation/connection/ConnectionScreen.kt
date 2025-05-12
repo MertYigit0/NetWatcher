@@ -24,7 +24,7 @@ class ConnectionActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             NetWatcherTheme {
-                ConnectionScreen()  // ConnectionScreen'i burada gösteriyoruz
+                ConnectionScreen()  
             }
         }
     }
